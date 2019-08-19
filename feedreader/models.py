@@ -84,6 +84,7 @@ class Feed(models.Model):
     xml_url = models.CharField(max_length=255, unique=True)
     link = models.CharField(max_length=2000, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+    image = models.CharField(max_length=2000, blank=True, null=True)
     published_time = models.DateTimeField(blank=True, null=True)
     last_polled_time = models.DateTimeField(blank=True, null=True)
     group = models.ForeignKey(Group, blank=True, null=True, on_delete=models.SET_NULL)
