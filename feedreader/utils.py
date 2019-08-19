@@ -142,6 +142,9 @@ def poll_feed(db_feed, verbose=False):
         db_feed.title = html.escape(parsed.feed.title)
     else:
         db_feed.title = parsed.feed.title
+    if parsed.feed.image:
+        db_feed.image = parsed.feed.image.href
+
     db_feed.link = parsed.feed.link
     if hasattr(parsed.feed, 'description_detail') and hasattr(parsed.feed, 'description'):
         if parsed.feed.description_detail.type == 'text/plain':

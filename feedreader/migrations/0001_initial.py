@@ -34,6 +34,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(blank=True, max_length=2000, null=True)),
                 ('xml_url', models.CharField(max_length=255, unique=True)),
                 ('link', models.CharField(blank=True, max_length=2000, null=True)),
+                ('image', models.CharField(blank=True, max_length=2000, null=True)),
                 ('description', models.TextField(blank=True, null=True)),
                 ('published_time', models.DateTimeField(blank=True, null=True)),
                 ('last_polled_time', models.DateTimeField(blank=True, null=True)),
